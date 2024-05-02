@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hamiltonian: Modeling Quantum Interactions</title>
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+    }
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+    .navbar {
+        background-color: #333;
+        padding: 10px 0;
+    }
+    .navbar-brand {
+        color: #fff;
+        font-size: 24px;
+    }
+    .navbar-brand img {
+        height: 40px;
+        width: auto;
+        margin-right: 10px;
+    }
+
+
+    .jumbotron {
+        background-image: url('hamiltonian_bg.jpg');
+        background-size: cover;
+        color: #ffffff;
+        padding: 100px 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .content-box {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <!-- Left Logo -->
+  <a class="navbar-brand" href="#">
+    <img src="left-logo.png" alt="Left Logo">
+    <!text!>
+  </a>
+  <!-- Right Logo -->
+  <a class="navbar-brand ml-auto" href="#">
+    <img src="right-logo.png" alt="Right Logo">
+  </a>
+</nav>
+
+<!-- Jumbotron -->
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">Hamiltonian: Modeling Quantum Interactions</h1>
+        <p class="lead">Exploring Quantum Mechanics and Protein Structures</p>
+    </div>
+</div>
+
+<div class="container">
+<a href="explanation.html" class="btn btn-primary mb-4">Back to Explanation</a>
+
+    <!-- Description of Hamiltonian -->
+    <div id="description" class="content-box">
+        <h2>Description</h2>
+        <p>The Hamiltonian is a fundamental concept in quantum mechanics that describes the total energy of a quantum system. It includes terms for kinetic energy, potential energy, and any interactions within the system.</p>
+<img class="d-block w-100" src="hamilf.png" alt="">
+    </div>
+
+    <!-- Quantum Energy Calculation -->
+    <div id="quantum-energy" class="content-box">
+        <h2>Quantum Energy</h2>
+<img class="d-block w-100" src="qenergy.gif" alt="">
+        <p>The Hamiltonian operator, often denoted as Ĥ, acts on the wavefunction of a quantum system to calculate the energy of that system. The time-independent Schrödinger equation ĤΨ = EΨ is central to these calculations, where Ĥ represents the Hamiltonian operator, Ψ is the wavefunction, and E is the energy eigenvalue.</p>
+        <p>The Hamiltonian allows us to compute the quantum energy levels and understand the behavior of quantum systems accurately.</p>
+    </div>
+
+    <!-- Protein Folding and Low Energy State -->
+    <div id="protein-folding" class="content-box">
+        <h2>Protein Folding and Low Energy State</h2>
+        <p>In the context of protein folding, the Hamiltonian can be used to model the interactions and energies of amino acids within a protein structure. By defining the Hamiltonian for a protein system accurately, we can simulate and predict the low energy states of protein folding.</p>
+        <p>The goal is to find the conformation (shape) of the protein that corresponds to the lowest energy state, as proteins tend to adopt stable configurations with minimal energy.</p>
+ <img class="center" src="quantumpro.png" alt="Trulli" style="width:60%" >
+  <figcaption>The ground-state fold 101000110 appears as the state with the highest probability(Lowest Energy State)</figcaption>
+        <p>The energy terms in the Hamiltonian for protein folding typically include bond energies, angle energies, dihedral energies, and non-bonded interactions such as van der Waals and electrostatic energies.</p>
+    </div>
+<div id="protein-folding" class="content-box">
+        <h2>Hamiltonian Quantum Flow Simulation</h2>
+        <p>Long time evolution of a quantum ensemble (mixed state) in an 1D anharmonic potential well, as visualized in phase space by the w:Wigner quasiprobability distribution. Because the potential well is not harmonic, the time-evolution is nontrivial.
+In the quantum case we have a similar swirling motion, but because of the uncertainty principle, there is a limit to how fine the swirling can become. As a result, all the subtle correlations stay visible forever. So, the way Gibbs explained entropy increase by finer and finer mixing doesn't apply so nicely in quantum mechanics. In fact, the quantum version will even show recurrences at some times, where the state goes back to resemble the original state. I have not tried to find these recurrence times and they are likely very long, given that there are dozens of slightly distinct frequencies are at play here.</p>
+ <iframe class ="center" src="https://commons.wikimedia.org/wiki/File:Hamiltonian_flow_quantum.webm?embedplayer=yes"   ></iframe>
+  <figcaption class ="center"  >Hamiltonian flow quantum</figcaption>
+        <p>Technical details:<br/>
+
+The ensemble starts out as roughly a rectangle in phase space (with blurred edges as necessary due to uncertainty principle); it was constructed using a statistical mixture of hundreds of gaussian wavepackets of various center positions and center momenta. Because they overlap, however, this doesn't mean there are hundreds of different distinct states. Rather, its von neumann entropy is only 2.368×k, i.e., by Schmidt decomposition it can be roughly approximated as a mixture of something like exp(2.368) ≈ 11 distinct pure states. In terms of the energy eigenstates, it spans about 42 energy eigenstates, but with significant correlations. Since the time-evolution is unitary, the von neumann entropy does not change with time.
+
+In contrast the equilibrated counterpart to this (see image) has higher entropy of 3.739×k, i.e., roughly ~42 distinct pure states. These equilibium pure states are the energy eigenstates: the time-averaging removes all the correlations between energy eigenstates of differing energy, and since all the energies are distinct in this case, the equilibrated version is a simple diagonal density matrix in the energy eigenbasis.
+
+The simulation only included the right-side potential well of this double-well potential, for reasons of speed. This artificially forbids quantum tunnelling to the left well, but we would not expect significant tunnelling to ever occur anyway because this is an asymmetric double well which has not been finely tuned to resonance. Not being tuned for resonance, this means the left-well and right-well energy ladders won't line up (unless by accident) to within the required degree, and so the eigenstates of the two wells will not hybridize and will instead remain cleanly separated into almost purely left-side and purely right-side eigenstates.</p>
+    </div>
+</div>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

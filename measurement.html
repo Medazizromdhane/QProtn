@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Measurement: From Superposition to Classical States</title>
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+    }
+    .navbar {
+        background-color: #333;
+        padding: 10px 0;
+    }
+    .navbar-brand {
+        color: #fff;
+        font-size: 24px;
+    }
+    .navbar-brand img {
+        height: 40px;
+        width: auto;
+        margin-right: 10px;
+    }
+    .jumbotron {
+        background-image: url('measurement_bg.jpg');
+        background-size: cover;
+        color: #ffffff;
+        padding: 100px 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+    .content-box {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <!-- Left Logo -->
+  <a class="navbar-brand" href="#">
+    <img src="left-logo.png" alt="Left Logo">
+    <!text!>
+  </a>
+  <!-- Right Logo -->
+  <a class="navbar-brand ml-auto" href="#">
+    <img src="right-logo.png" alt="Right Logo">
+  </a>
+</nav>
+
+<!-- Jumbotron -->
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">Measurement</h1>
+        <p class="lead">Exploring the Transition from Quantum Superposition to Classical States</p>
+    </div>
+</div>
+
+<div class="container">
+<a href="explanation.html" class="btn btn-primary mb-4">Back to Explanation</a>
+
+    <!-- Introduction to Measurement -->
+    <div class="content-box">
+        <h2>Introduction to Measurement</h2>
+        <p>Measurement in quantum mechanics is a crucial concept that plays a fundamental role in the transition from quantum superposition states to classical observable states.</p>
+        <p>When a quantum system is measured, it collapses from a superposition of states into one of its possible eigenstates, with each outcome determined by a probability amplitude.</p>
+ <img class="center" src="density.png" alt="Trulli" style="width:60%" >
+        <figcaption>Probability density \( P_{n}(x) \) for the outcome of a position measurement given the energy eigenstate \( |n\rangle \) of a 1D harmonic oscillator.</figcaption>
+
+
+    </div>
+
+    <!-- Quantum Superposition -->
+    <div class="content-box">
+        <h2>Quantum Superposition</h2>
+        <p>Quantum superposition is a principle where a quantum system exists in multiple states simultaneously until measured. This phenomenon is exemplified by particles such as electrons that can be in a superposition of spin-up and spin-down states until observed.</p>
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="superposition.gif" class="img-fluid" alt="Superposition 1">
+        <figcaption>Illustration of the quantum physics concept known as “superposition.” In the ordinary classical world, a skateboarder could be in only one location or position at a time, such as the left side of the ramp (which could represent a data value of 0) or the right side (representing a 1). But if a skateboarder could behave like a quantum object (such as an atom), he or she could be in a “superposition” of 0 and 1, effectively existing in both places at the same time. </figcaption>
+
+            </div>
+            <div class="col-sm-4">
+                <img src="superposition2.gif" class="img-fluid" alt="Superposition 2">
+<figcaption>This artist’s conception imagines the proposed ring of atoms as cars on a beltway. Captured and then stirred into motion by lasers, the atoms would form a “superposition”, a quantum state in which they would be simultaneously circulating around the ring and stationary</figcaption>
+            </div>
+                    </div>
+    </div>
+
+    <!-- Collapse of Quantum States -->
+    <div class="content-box">
+        <h2>Collapse of Quantum States</h2>
+        <p>Upon measurement, the wavefunction of a quantum system collapses to one of its possible states, each with a probability determined by the system's quantum state before measurement.</p>
+        <p>This collapse results in the system exhibiting classical behavior, with observable properties akin to those predicted by classical physics.</p>
+ <img class ="center" src="collapse.png" class="img-fluid" alt="Superposition 1">
+
+    </div>
+
+   
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

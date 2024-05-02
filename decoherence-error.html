@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Decoherence and Error Correction</title>
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+    }
+.navbar {
+        background-color: #333;
+        padding: 10px 0;
+    }
+    .navbar-brand {
+        color: #fff;
+        font-size: 24px;
+    }
+    .navbar-brand img {
+        height: 40px;
+        width: auto;
+        margin-right: 10px;
+    }
+    .jumbotron {
+        background-image: url('deco.jpg');
+        background-size: cover;
+        color: #ffffff;
+        padding: 100px 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+    }
+    .content-box {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+    .figure-img {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <!-- Left Logo -->
+  <a class="navbar-brand" href="#">
+    <img src="left-logo.png" alt="Left Logo">
+    <!text!>
+  </a>
+  <!-- Right Logo -->
+  <a class="navbar-brand ml-auto" href="#">
+    <img src="right-logo.png" alt="Right Logo">
+  </a>
+</nav>
+
+<!-- Jumbotron -->
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">Decoherence and Error Correction</h1>
+        <p class="lead">Decoherence and Error Correction: Overcoming Quantum Noise</p>
+    </div>
+</div>
+
+<div class="container">
+<a href="explanation.html" class="btn btn-primary mb-4">Back to Explanation</a>
+
+       <!-- Decoherence -->
+    <div class="content-box">
+        <h2>Decoherence: A Challenge in Quantum Computing</h2>
+        <p>Decoherence is a fundamental issue in quantum computing, arising from interactions with the environment that cause quantum systems to lose their coherence and quantum properties over time.</p>
+        <p>This phenomenon poses a significant challenge in maintaining the delicate quantum states required for quantum computations and preventing information loss.</p>
+         <img src="Decoherence.gif" class="img-fluid" alt="Decoherence">
+        <figcaption>Decoherence occurs when a quantum superposition (such as an atom in a 0 and 1 state at the same time) is destroyed by some outside disturbance, such as an experimenter measuring the atom. </figcaption>
+
+
+    </div>
+
+    <!-- Error Correction -->
+    <div class="content-box">
+        <h2>Error Correction Strategies</h2>
+        <p>Error correction techniques are crucial in mitigating the effects of decoherence and quantum noise. Quantum error correction codes such as the Shor code and the surface code play a vital role in preserving quantum information.</p>
+        <p>These codes use redundant quantum states to detect and correct errors caused by decoherence and other noise sources, ensuring the reliability of quantum computations.</p>
+        <img src="qec.png" class="figure-img img-fluid" alt="Error Correction">
+    </div>
+
+    <!-- Quantum Noise -->
+    <div class="content-box">
+        <h2>Understanding Quantum Noise</h2>
+        <p>Quantum noise stems from various sources such as thermal fluctuations, control errors in quantum gates, and interactions with surrounding particles.</p>
+        <p>Quantum error correction strategies aim to combat these noise sources, allowing quantum computers to execute complex algorithms accurately.</p>
+        <img src="noise.png" class="figure-img img-fluid" alt="Quantum Noise">
+<figcaption>Decoherence occurs when a quantum superposition (such as an atom in a 0 and 1 state at the same time) is destroyed by some outside disturbance, such as an experimenter measuring the atom. </figcaption>
+    </div>
+</div>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

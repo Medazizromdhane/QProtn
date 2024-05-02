@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Optimization Algorithms</title>
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+    }
+    .navbar {
+        background-color: #333;
+        padding: 10px 0;
+    }
+    .navbar-brand {
+        color: #fff;
+        font-size: 24px;
+    }
+    .navbar-brand img {
+        height: 40px;
+        width: auto;
+        margin-right: 10px;
+    }
+
+    .jumbotron {
+        background-image: url('optimization_bg.png');
+        background-size: cover;
+        color:#fffffff
+        padding: 100px 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .content-box {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Create a responsive grid layout */
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .column {
+        flex: 0 0 calc(33.33% - 20px); /* Adjust column width */
+        margin-bottom: 20px; /* Add margin between images */
+    }
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+    .column img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <!-- Left Logo -->
+  <a class="navbar-brand" href="#">
+    <img src="left-logo.png" alt="Left Logo">
+    <!text!>
+  </a>
+  <!-- Right Logo -->
+  <a class="navbar-brand ml-auto" href="#">
+    <img src="right-logo.png" alt="Right Logo">
+  </a>
+</nav>
+
+<!-- Jumbotron -->
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">Optimization Algorithms</h1>
+        <p class="lead">Exploring General and Quantum Optimization</p>
+    </div>
+</div>
+
+<div class="container">
+    <!-- General Optimization Algorithms -->
+<a href="explanation.html" class="btn btn-primary mb-4">Back to Explanation</a>
+
+    <div id="general-algorithms" class="content-box">
+        <h2>General Optimization Algorithms</h2>
+        <p>General optimization algorithms aim to find the best solution among a set of possible solutions based on defined criteria. These algorithms can be categorized into various types such as gradient-based methods, evolutionary algorithms, and metaheuristic algorithms.</p>
+        <p>They are widely used in fields such as machine learning, engineering, finance, and operations research.</p>
+        <div class="row">
+            <div class="column">
+                <img src="tsp.png" alt="Traveling Salesman Problem">
+            </div>
+            <div class="column">
+                <img src="gd.png" alt="Gradient Descent">
+            </div>
+            <div class="column">
+                <img src="ene.png" alt="Energy Optimization">
+            </div>
+        </div>
+    </div>
+
+    <!-- Quantum Optimization Algorithms -->
+    <div id="quantum-algorithms" class="content-box">
+        <h2>Quantum Optimization Algorithms</h2>
+        <p>Quantum optimization algorithms leverage quantum computing principles to solve optimization problems efficiently. They take advantage of quantum phenomena such as superposition and entanglement to explore multiple solutions simultaneously.</p>
+        <p>These algorithms have the potential to solve complex optimization problems that are intractable for classical computers.</p>
+<div class="row">
+            <div class="column">
+                <img src="QAOA.png" alt="Quantum approximate optimization algorithm">
+            </div>
+            <div class="column">
+                <img src="dia.png" alt="Variational quantum eigensolver">
+            </div>
+           
+        </div>
+
+    </div>
+<div id="quantum-algorithms" class="content-box">
+    <h2>Quantum Variational Algorithms</h2>
+<img class="d-block w-100" src="qva.png" alt="">
+    <p>Quantum variational algorithms  are metaheuristics designed to address combinatorial optimization problems of the form:</p>
+  <div>
+    <p style="font-size: 18px;" class="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\( \min_{x \in \{0,1\}^n} f(x) \) (1)</p>
+</div>
+    <p>where f is a polynomial function. A VQA consists of two parts: a quantum part and a classical part, which exchange information and alternate successively.</p>
+    <p>The quantum part is a quantum circuit, defined by a unitary matrix parametrized by d real numbers θ ∈ ℝ<sup>d</sup>. This parameterized circuit is a continuous function U: ℝ<sup>d</sup> → M<sub>2<sup>n</sup></sub>(ℂ) that associates each θ with a unitary matrix applied on n qubits. Once this circuit is executed on the quantum computer, we sample the probability distribution over the solution space {0,1}<sup>n</sup> at the output.</p>
+    <p>The classical part performs optimization over θ as follows:</p>
+   <p style="font-size: 18px;" class="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\( \min_{\theta \in \mathbb{R}^d} g(\theta) \)</p>
+    <p>where the function g: ℝ<sup>d</sup> → ℝ, dependent on U and f, is defined such that the classical optimization solver searches for the optimal parameters θ* such that the probability of measuring an optimal solution from (1) is high.</p>
+</div>
+
+
+    <!-- Variational Quantum Eigensolver (VQE) Algorithm -->
+   <div id="vqe" class="content-box">
+    <h2>Variational Quantum Eigensolver (VQE)</h2>
+
+
+    <p>The Variational Quantum Eigensolver (VQE) is a hybrid quantum-classical algorithm designed for simulating quantum systems, introduced by Peruzzo et al. (2014) and McClean et al. (2015). It finds applications in various quantum simulations, such as solving the molecular electronic Schrödinger equation and modeling systems in condensed matter physics like Fermi– and Bose–Hubbard models.</p>
+    <p>In this context, we delve into VQE's role in tackling the molecular electronic structure problem, particularly in determining the ground-state energy of a molecular system. The Hamiltonian for such systems, under the Born-Oppenheimer approximation, takes a specific form, where h<sub>nuc</sub> represents nuclear repulsion energy, and the coefficients h<sub>pq</sub> and h<sub>pqrs</sub> are derived from solving a mean-field problem. The transformation of this Hamiltonian into the qubit basis (e.g., Jordan–Wigner, Bravyi–Kitaev) allows it to be expressed using operators acting on qubits.</p>
+     <p>We then introduce a trial wavefunction ansatz |Ψ(&theta;<sub>⃗</sub>)⟩=U(&theta;<sub>⃗</sub>)|0⟩ dependent on parameters &theta;<sub>⃗</sub> = (&theta;<sub>1</sub>, &theta;<sub>2</sub>, …, &theta;<sub>m</sub>), which define a unitary operator acting on the reference state |0⟩. The variational principle guides us to minimize the expectation value of the Hamiltonian to find the optimal set of variational parameters, providing an upper bound to the true ground-state energy E<sub>gs</sub>.</p>
+    <p>Choosing a suitable variational trial ansatz (e.g., unitary coupled-cluster, heuristic), initializing parameters, transforming to the qubit basis, and applying approximations like Trotter–Suzuki are essential steps. Converting the ansatz to a quantum circuit enables its implementation on quantum hardware. Energy measurements, either on quantum hardware or via simulation, yield the energy value based on the Hamiltonian terms' expectation values.</p>
+    <p>This computed energy feeds into a classical optimizer to update variational parameters iteratively, preparing new quantum circuit states until convergence. The algorithmic workflow is depicted below, showcasing the iterative process of parameter optimization and quantum state preparation until reaching an optimal energy value.</p>
+<img class="d-block w-100" src="vqe.png" alt=""
+</div>
+
+
+</div>
+<div id="qaoa" class="content-box">
+    <h2>Quantum Approximate Optimization Algorithm (QAOA)</h2>
+<p><b>The Adiabetic Theorem: </b> describes the evolution of a quantum system when subjected to a slowly varying Hamiltonian. Mathematically, it can be stated as follows:</p>
+    
+    <p>Let \( H(t) \) be a time-dependent Hamiltonian, and let \( |n(t) \rangle \) be the instantaneous eigenstates of \( H(t) \) with corresponding eigenvalues \( E_n(t) \). The adiabatic theorem states that if the Hamiltonian changes slowly in time, i.e., if the rate of change of \( H(t) \) is much smaller than the energy gap between the eigenstate \( |n(t) \rangle \) and the rest of the spectrum, then the system remains in its instantaneous eigenstate as it evolves, up to a phase factor.</p>
+    
+    <p>The Schrödinger equation governing the time evolution of the system is given by:</p>
+    \[ i\hbar \frac{\partial}{\partial t} |\psi(t)\rangle = H(t) |\psi(t)\rangle \]
+    
+    <p>If the system starts in the \( n \)-th eigenstate \( |n(0)\rangle \) of \( H(0) \) with energy \( E_n(0) \), then the state of the system at time \( t \) is approximately:</p>
+    \[ |\psi(t)\rangle \approx e^{-i\theta(t)} |n(t)\rangle \]
+    
+    <p>Here, \( \theta(t) \) is a dynamical phase accumulated by the state \( |n(t)\rangle \) due to the time evolution of the system.</p> </p>
+    <p>We particularly study the <b>  Quantum Approximate Optimization Algorithm (QAOA)</b>, which represents the reference VQA for solving combinatorial optimization problems, historically applied to the Max-Cut problem. It is a subclass of VQAs that has been extensively studied in the literature.</p>
+    <p>The quantum circuit of QAOA is parameterized by \( 2p \) real numbers \( \gamma, \beta \), where \( p \in \mathbb{N} \) is a meta-parameter called the circuit depth. The quantum circuit \( U(\gamma, \beta) \) is expressed in terms of the objective function \( f \). Its form originates from the adiabatic theorem and is of interest to the scientific community because it cannot be efficiently simulated by a classical computer.</p>
+    <p>The optimization function \( g \) is chosen as the average cost of a quantum state produced by the circuit, meaning,</p>
+    <p>
+        \[
+        g(\gamma, \beta) = \sum_{x \in \{0,1\}^n} p(\gamma,\beta)(x) f(x),
+        \]
+    </p>
+    <p>where \( p(\gamma,\beta)(x) \) is the probability of measuring the solution \( x \) at the output of the circuit \( U(\gamma, \beta) \). We will discuss the mathematical properties satisfied by the definitions of \( g \) and \( U \) specific to QAOA.</p>
+<img class="d-block w-100" src="qaoaa.png" alt=""
+</div>
+
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

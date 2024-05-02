@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quantum Circuits</title>
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+    }
+    /* Add this style for the image */
+    .img-fluid {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .navbar {
+        background-color: #333;
+        padding: 10px 0;
+    }
+    .navbar-brand {
+        color: #fff;
+        font-size: 24px;
+    }
+    .navbar-brand img {
+        height: 40px;
+        width: auto;
+        margin-right: 10px;
+    }
+    .navbar-nav .nav-link {
+        color: #fff !important;
+        font-size: 18px;
+        margin-right: 20px;
+    }
+    .jumbotron {
+        background-image: url('background.jpg');
+        background-size: cover;
+        color: #fff;
+        padding: 100px 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
+    .container {
+        margin-top: 30px;
+    }
+    .content-box {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+    .img-placeholder {
+        width: 100%;
+        height: 400px; /* Increase height for larger images */
+        background-color: #ddd;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        overflow: hidden; /* Ensures images don't exceed container */
+    }
+    .btn-return {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 18px;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+    .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <!-- Left Logo -->
+  <a class="navbar-brand" href="#">
+    <img src="left-logo.png" alt="Left Logo">
+    <!text!>
+  </a>
+  <!-- Right Logo -->
+  <a class="navbar-brand ml-auto" href="#">
+    <img src="right-logo.png" alt="Right Logo">
+  </a>
+</nav>
+
+<!-- Jumbotron -->
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">Quantum Circuits</h1>
+        <p class="lead">Exploring the Fundamental Units of Quantum Computation</p>
+    </div>
+</div>
+
+<div class="container">
+    <a href="explanation.html" class="btn btn-return">Back to Explanation</a>
+
+    <div class="content-box">
+        <h2>Understanding Quantum Circuits</h2>
+        <div class="img-placeholder">
+            <img src="circuitquant.png" alt="Quantum Circuit" class="img-fluid">
+        </div>
+        <p>Quantum circuits are essential components in quantum computing, allowing us to perform complex computations leveraging quantum properties such as superposition and entanglement.</p>
+        <p>Key concepts include:</p>
+        <ul>
+            <li><strong>Qubits:</strong> Quantum bits representing 0, 1, or both simultaneously due to superposition.</li>
+            <li><strong>Quantum Gates:</strong> Operations manipulating qubits (e.g., Hadamard, CNOT) for computation.</li>
+            <li><strong>Quantum Algorithms:</strong> Utilizing quantum circuits to solve problems faster than classical computers.</li>
+        </ul>
+        <p>Explore the examples below to visualize quantum circuits:</p>
+        <div class="row">
+            <div class="col-md-4">
+                <div >
+                    <img src="gate1.png" alt="Quantum Circuit 1" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div>
+                    <img src="gate2.png" alt="Quantum Circuit 2" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div>
+                    <img src="gate3.png" alt="Quantum Circuit 3" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <p>These circuits demonstrate quantum phenomena and are foundational in developing quantum technologies.</p>
+<p>Try to simulate quantum circuits using Quirk A Drag&Drop Free-Solution by Algassert.com</p>
+
+ <div class="iframe-container">
+            <iframe src="https://algassert.com/quirk#" width="1000" height="600"></iframe>
+
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

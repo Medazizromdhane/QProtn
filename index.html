@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QProtn: Accelerating Protein Folding</title>
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    body {
+cursor: url('qubit.png'), auto;
+        font-family: 'Segoe UI', sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+
+
+        
+    }
+ .jumbotron {
+        background-image: url('background.jpg');
+        background-size: cover;
+        color: #fff;
+        padding: 100px 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
+.navbar-brand img {
+        width: 120px; /* Adjust width for larger logos */
+        height: auto; /* Adjust height for larger logos */
+        object-fit: contain; /* Ensure the entire image is visible */
+    }
+
+    .btn-custom {
+        background-color: #007bff;
+        color: #fff;
+        border-color: #007bff;
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: background-color 0.3s;
+    }
+    .btn-custom:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+    .feature-box {
+        background-color: rgba(255, 255, 255, 0.9); /* Light background for boxes */
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 30px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    /* Black text color for feature box titles and paragraphs */
+    .feature-box h3, .feature-box p {
+        color: #333;
+    }
+    /* Larger logos */
+    .navbar-brand img {
+        width: 120px; /* Adjust width for larger logos */
+        height: auto; /* Adjust height for larger logos */
+        object-fit: contain; /* Ensure the entire image is visible */
+    }
+.tero {
+  cursor: url(https://cdn-icons-png.flaticon.com/512/2620/2620607.png), auto;
+}
+</style>
+</head>
+<body class="tero">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <!-- Left Logo -->
+  <a class="navbar-brand" href="#">
+    <img src="left-logo.png" alt="Left Logo">
+    <!text!>
+  </a>
+  <!-- Right Logo -->
+  <a class="navbar-brand ml-auto" href="#">
+    <img src="right-logo.png" alt="Right Logo">
+  </a>
+</nav>
+
+<!-- Jumbotron -->
+<div class="jumbotron">
+    <div class="container text-center">
+        <h1 class="display-4">Welcome to QProtn</h1>
+        <p class="lead">Explore the fascinating world of quantum protein folding with our interactive simulation tool.</p>
+        <a href="explanation.html" class="btn btn-lg btn-custom">Get Started</a>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="feature-box">
+                <h3>How it works</h3>
+                <p>Click the button above to learn how our advanced simulation algorithms using quantum computing predict protein structures and interactions.</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="feature-box">
+                <h3>Try it now</h3>
+                <p>Choose your own sequence and visualize the folded protein structures while analyzing interaction energies.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Qprotn</p>
+</footer>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- JavaScript -->
+<script>
+    document.getElementById('runSimulationBtn').addEventListener('click', async function() {
+        const response = await fetch('/runSimulation');
+        const result = await response.text();
+        alert(result); // Display the result (you can modify this part)
+    });
+</script>
+</body>
+</html>
